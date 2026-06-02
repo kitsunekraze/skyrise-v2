@@ -1,0 +1,60 @@
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#050816;
+color:white;
+overflow-x:hidden;
+}
+#bg{position:fixed;inset:0;z-index:-2;}
+.mouse-glow{
+position:fixed;width:300px;height:300px;border-radius:50%;
+background:radial-gradient(circle,rgba(139,92,246,.3),transparent 70%);
+pointer-events:none;z-index:-1;transform:translate(-50%,-50%);
+}
+nav{
+display:flex;justify-content:space-between;padding:24px 8%;
+backdrop-filter:blur(10px);
+}
+.logo{
+font-size:2rem;font-weight:800;
+background:linear-gradient(90deg,#8B5CF6,#60A5FA);
+-webkit-background-clip:text;color:transparent;
+}
+.links a{color:white;text-decoration:none;margin-left:20px;}
+.hero{
+min-height:85vh;display:flex;align-items:center;justify-content:space-around;
+padding:40px;
+}
+.hero h1{
+font-size:6rem;margin:0;
+background:linear-gradient(90deg,#8B5CF6,#60A5FA);
+-webkit-background-clip:text;color:transparent;
+}
+.hero p{font-size:1.2rem;opacity:.85;}
+.buttons button{
+padding:14px 28px;border:none;border-radius:14px;
+margin-right:12px;cursor:pointer;
+background:linear-gradient(90deg,#8B5CF6,#60A5FA);color:white;
+}
+.secondary{background:transparent;border:1px solid #8B5CF6;}
+.island{
+font-size:10rem;
+animation:float 4s ease-in-out infinite;
+filter:drop-shadow(0 0 30px #8B5CF6);
+}
+@keyframes float{
+50%{transform:translateY(-20px);}
+}
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;padding:60px 8%;
+}
+.card{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.1);
+padding:30px;border-radius:20px;
+backdrop-filter:blur(10px);
+}
+.card:hover{transform:translateY(-8px);transition:.3s;}
