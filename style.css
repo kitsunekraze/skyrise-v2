@@ -63,17 +63,28 @@ backdrop-filter:blur(10px);
     filter: drop-shadow(0 0 40px rgba(138,43,226,.7));
 }
 
-.hero-island img {
-    width: 420px;
+.hero-image img {
+    width: 500px;
     max-width: 100%;
+    border-radius: 25px;
+
+    box-shadow:
+        0 0 40px rgba(140, 82, 255, 0.6),
+        0 0 100px rgba(140, 82, 255, 0.3);
+
+    animation: float 4s ease-in-out infinite;
 }
 
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-12px); }
-    100% { transform: translateY(0px); }
-}
+    0% {
+        transform: translateY(0px);
+    }
 
-.hero-image img {
-    animation: float 4s ease-in-out infinite;
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
