@@ -69,10 +69,11 @@ backdrop-filter:blur(10px);
 }
 
 @keyframes float {
-    0%,100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
+.hero-image img {
+    animation: float 4s ease-in-out infinite;
 }
